@@ -24,6 +24,8 @@ module.exports = appInfo => {
     root: [
       path.join(appInfo.baseDir, 'app/web'),
     ].join(','),
+    template:
+      path.join(appInfo.baseDir, 'app/web/layout.html'),
   };
   // add your user config here
   const userConfig = {
