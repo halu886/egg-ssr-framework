@@ -5,7 +5,7 @@ const Controller = require('egg').Controller;
 class HomeController extends Controller {
   async index() {
     const { ctx } = this;
-    ctx.render('index/index.js', { recommends: [
+    ctx.render('page/index/index.vue', { recommends: [
       { lable: 1 },
       { lable: 2 },
       { lable: 3 },

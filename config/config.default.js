@@ -22,8 +22,7 @@ module.exports = appInfo => {
   config.view = {
     defaultViewEngine: 'vueTuji',
     root: [
-      path.join(appInfo.baseDir, 'app/view'),
-      path.join(appInfo.baseDir, 'path/to/another'),
+      path.join(appInfo.baseDir, 'app/web'),
     ].join(','),
   };
   // add your user config here

@@ -6,6 +6,8 @@ module.exports = {
   // static: {
   //   enable: true,
   // }
-  enable: true,
-  package: 'egg-view-vue-tuji',
+  vueTuji: {
+    enable: true,
+    package: 'egg-view-vue-tuji',
+  },
 };
