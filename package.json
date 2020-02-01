@@ -20,6 +20,7 @@
     "autod": "^3.0.1",
     "autod-egg": "^1.1.0",
     "babel-loader": "^8.0.6",
+    "cross-env": "^6.0.3",
     "egg-bin": "^4.11.0",
     "egg-ci": "^1.11.0",
     "egg-mock": "^3.21.0",
@@ -29,7 +30,9 @@
     "friendly-errors-webpack-plugin": "^1.7.0",
     "vue": "^2.6.11",
     "vue-loader": "^15.8.3",
-    "vue-server-renderer": "^2.6.11",
+    "vue-server-renderer": "^2.5.11",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
     "webpack-merge": "^4.2.2",
     "webpack-node-externals": "^1.7.2"
   },
@@ -46,7 +49,10 @@
     "cov": "egg-bin cov",
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
-    "autod": "autod"
+    "autod": "autod",
+    "build:server": "webpack --config config/built-server-bundle.js --progress --hide-modules",
+    "build:client": "webpack --config config/built-client-bundle.js --progress --hide-modules",
+    "build": "npm run build:server && npm run build:client"
   },
   "ci": {
     "version": "10"

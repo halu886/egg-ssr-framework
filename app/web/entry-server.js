@@ -2,7 +2,10 @@
 
 const { createApp } = require('./app.js');
 
-module.exports = () => {
+export default context => {
+  // console.log(context);
   const { app } = createApp();
-  return app;
+  return new Promise((resolve)=>{
+    resolve(app);
+  });
 };
