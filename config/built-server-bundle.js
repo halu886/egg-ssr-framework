@@ -9,7 +9,10 @@ const path = require('path');
 module.exports = merge(baseConfig, {
   target: 'node',
   devtool: '#source-map',
-  entry: path.resolve(__dirname, '../app/web/entry-server.js'),
+  entry: {
+    'app.js': path.resolve(__dirname, '../app/web/view/App.vue'),
+    'test.js': path.resolve(__dirname, '../app/web/view/test.js')
+  },
   output: {
     filename: 'server-bundle.js',
     libraryTarget: 'commonjs2',
