@@ -10,4 +10,8 @@ module.exports = {
     enable: true,
     package: 'egg-view-vue-tuji',
   },
+  webpackTuji: {
+    enable: true,
+    package: 'egg-webpack-tuji',
+  },
 };

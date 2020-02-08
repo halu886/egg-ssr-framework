@@ -3,6 +3,7 @@
 'use strict';
 
 const path = require('path');
+const webpackOption = require('./built-server-bundle.js');
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
@@ -33,13 +34,16 @@ module.exports = appInfo => {
     ].join(','),
     template:
       path.join(appInfo.baseDir, 'app/web/layout.html'),
-    clientManifest:
-      path.join(appInfo.baseDir, 'dist/vue-ssr-client-manifest.json'),
-    buildJson:
-      path.join(appInfo.baseDir, 'dist/vue-ssr-server-bundle.json'),
-    webpackBuild:
-      path.join(appInfo.baseDir, 'config/built-server-bundle.js'),
+    // clientManifest:
+    //   path.join(appInfo.baseDir, 'dist/vue-ssr-client-manifest.json'),
+    // buildJson:
+    //   path.join(appInfo.baseDir, 'dist/vue-ssr-server-bundle.json'),
+    // webpackBuild:
+    //   path.join(appInfo.baseDir, 'config/built-server-bundle.js'),
   };
+
+  config.webpack = webpackOption;
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',

@@ -3,7 +3,7 @@
 // app.js
 class AppBootHook {
   async serverDidReady() {
-
+    // console.log(this.app.webpack);
   }
 }
 
