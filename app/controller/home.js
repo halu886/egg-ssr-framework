@@ -5,7 +5,12 @@ const Controller = require('egg').Controller;
 class HomeController extends Controller {
   async index() {
     const { ctx } = this;
-    ctx.body = await ctx.render('test.js');
+    await ctx.render('index.js');
+  }
+
+  async renderString() {
+    const { ctx } = this;
+    ctx.body = await ctx.renderString('index.js');
   }
 }
 

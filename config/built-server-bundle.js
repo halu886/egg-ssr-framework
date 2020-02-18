@@ -3,15 +3,15 @@ const webpack = require('webpack');
 const merge = require('webpack-merge');
 const nodeExternals = require('webpack-node-externals');
 const baseConfig = require('./webpack.base.config.js');
-const VueSSRServerPlugin = require('vue-server-renderer/server-plugin');
+// const VueSSRServerPlugin = require('vue-server-renderer/server-plugin');
 const path = require('path');
 
 module.exports = merge(baseConfig, {
   target: 'node',
   devtool: '#source-map',
   entry: {
-    'app.js': path.resolve(__dirname, '../app/web/views/App.vue'),
-    'test.js': path.resolve(__dirname, '../app/web/views/test/test.vue'),
+    'views/test/index': path.resolve(__dirname, '../app/web/views/test/index.js'),
+    index: path.resolve(__dirname, '../app/web/index.js'),
   },
   output: {
     filename: '[name].js',
@@ -33,6 +33,6 @@ module.exports = merge(baseConfig, {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
       'process.env.VUE_ENV': '"server"',
     }),
-    new VueSSRServerPlugin(),
+    // new VueSSRServerPlugin(),
   ],
 });

@@ -1,22 +1,9 @@
 <template>
-    <div>
+    <div id="app">
         test
     </div>
 </template>
 <script>
 export default {
-    data(){
-        return {
-        }
-    },
-    computed: {
-        
-    },
-    methods: {
-        
-    },
-    mounted() {
-
-    }
 }
 </script>

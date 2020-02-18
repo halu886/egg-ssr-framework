@@ -50,8 +50,8 @@
 </style>
 
 <script>
-import mainHeader from "../components/mainHeader/index.vue";
-import mainFooter from "../components/mainFooter/index.vue";
+import mainHeader from "./components/mainHeader/index.vue";
+import mainFooter from "./components/mainFooter/index.vue";
 export default {
    components:{
        mainHeader,

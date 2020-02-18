@@ -14,9 +14,8 @@ module.exports = {
     ? false
     : '#cheap-module-source-map',
   output: {
-    // path: path.resolve(__dirname, '../dist'),
     publicPath: '/dist/',
-    filename: '[name].[chunkhash].js',
+    // filename: '[name].[chunkhash].js',
   },
   resolve: {
     alias: {
@@ -50,17 +49,8 @@ module.exports = {
       },
       {
         test: /\.less$/,
-        use:
-[ 'vue-style-loader', 'css-loader', 'less-loader' ],
+        use: [ 'vue-style-loader', 'css-loader', 'less-loader' ],
       },
-      // {
-      //   test: /\.less$/,
-      //   use: [
-      //     'vue-style-loader',
-      //     'css-loader',
-      //     'less-loader',
-      //   ],
-      // },
       {
         test: /\.styl(us)?$/,
         use: isProd

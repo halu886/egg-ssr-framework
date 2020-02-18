@@ -1,6 +1,6 @@
 'use strict';
 
-const { createApp } = require('./app');
+const { createApp } = require('.');
 
 // 客户端特定引导逻辑……
 

@@ -29,17 +29,15 @@ module.exports = appInfo => {
 
   config.view = {
     defaultViewEngine: 'vueTuji',
-    root: [
+    root: ([
       path.join(appInfo.baseDir, 'app/web'),
-    ].join(','),
+    ].join(',')),
+    mapping: {
+      '.js': 'vueTuji',
+      '.vue': 'vueTuji',
+    },
     template:
       path.join(appInfo.baseDir, 'app/web/layout.html'),
-    // clientManifest:
-    //   path.join(appInfo.baseDir, 'dist/vue-ssr-client-manifest.json'),
-    // buildJson:
-    //   path.join(appInfo.baseDir, 'dist/vue-ssr-server-bundle.json'),
-    // webpackBuild:
-    //   path.join(appInfo.baseDir, 'config/built-server-bundle.js'),
   };
 
   config.webpack = webpackOption;
