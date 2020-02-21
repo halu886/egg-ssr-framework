@@ -1,9 +1,9 @@
 <template>
     <div class="main-header">
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div>4</div>
+        <div>{{$root.headers[0]}}</div>
+        <div>{{$root.headers[1]}}</div>
+        <div>{{$root.headers[2]}}</div>
+        <div>{{$root.headers[3]}}</div>
     </div>
 </template>
 <style lang="less">

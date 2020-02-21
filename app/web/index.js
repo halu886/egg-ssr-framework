@@ -8,6 +8,7 @@ import App from './App.vue'
 export default context=>{
   const appInit = new Vue({
     // 根实例简单的渲染应用程序组件。
+    data:context,
     render: h => h(App),
   });
   return new Promise((resolve,reject)=>{
