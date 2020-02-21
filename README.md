@@ -1,6 +1,31 @@
 # pc-4.0-demo
 
-demo of pc`s 4.0 that research the new framework base of egg and build by webpack and render by vue 
+demo of pc`s 4.0 that research the new framework base of egg and build by webpack and render by vue 🐰
+
+> it depend on [Egg-webpack-tuji](http://gogs.tuji.com/hongchun/egg-webpack-tuji) && [Egg-view-vue-tuji](http://gogs.tuji.com/hongchun/egg-view-vue-tuji) that encapsulation by [halu886🧑🏻‍💻](http://gogs.tuji.com/hongchun)。
+
+<!-- TOC -->
+
+- [pc-4.0-demo](#pc-40-demo)
+    - [Plan List](#plan-list)
+    - [QuickStart](#quickstart)
+        - [Development](#development)
+        - [Deploy](#deploy)
+        - [npm scripts](#npm-scripts)
+    - [Plan List](#plan-list)
+
+<!-- /TOC -->
+
+## Plan List
+
+- Framework init ☑
+- Vue component render ☑️
+- Webpack bundler ☑️
+- Template cache ☑️
+- Inject data to template ☑️
+- intergration lru module 🔨
+- Client side hydration 🔨
+- Authority interceptor 🔨
 
 ## QuickStart
 
@@ -31,3 +56,14 @@ $ npm stop
 
 
 [egg]: https://eggjs.org
+
+## Plan List
+
+- Framework init ☑
+- Vue component render ☑️
+- Webpack bundler ☑️
+- Template cache ☑️
+- Inject data to template ☑️
+- intergration lru module 🔨
+- Client side hydration 🔨
+- Authority interceptor 🔨
