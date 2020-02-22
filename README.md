@@ -7,18 +7,17 @@ demo of pc`s 4.0 that research the new framework base of egg and build by webpac
 <!-- TOC -->
 
 - [pc-4.0-demo](#pc-40-demo)
-    - [Plan List](#plan-list)
+    - [Checkout List](#checkout-list)
     - [QuickStart](#quickstart)
         - [Development](#development)
         - [Deploy](#deploy)
         - [npm scripts](#npm-scripts)
-    - [Plan List](#plan-list)
 
 <!-- /TOC -->
 
-## Plan List
+## Checkout List
 
-- Framework init ☑
+- Framework init ☑️
 - Vue component render ☑️
 - Webpack bundler ☑️
 - Template cache ☑️
@@ -56,14 +55,3 @@ $ npm stop
 
 
 [egg]: https://eggjs.org
-
-## Plan List
-
-- Framework init ☑
-- Vue component render ☑️
-- Webpack bundler ☑️
-- Template cache ☑️
-- Inject data to template ☑️
-- intergration lru module 🔨
-- Client side hydration 🔨
-- Authority interceptor 🔨
