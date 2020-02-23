@@ -22,7 +22,7 @@ demo of pc`s 4.0 that research the new framework base of egg and build by webpac
 - Webpack bundler ☑️
 - Template cache ☑️
 - Inject data to template ☑️
-- intergration lru module 🔨
+- intergration lru module ☑️
 - Client side hydration 🔨
 - Authority interceptor 🔨
 
