@@ -1,0 +1,36 @@
+{
+  "publicPath": "/dist/",
+  "all": [
+    "main.js",
+    "main.js.map",
+    "manifest.js",
+    "manifest.js.map"
+  ],
+  "initial": [
+    "manifest.js",
+    "main.js"
+  ],
+  "async": [],
+  "modules": {
+    "fbeb9bf8": [
+      0,
+      1
+    ],
+    "336eba15": [
+      0,
+      1
+    ],
+    "7993c068": [
+      0,
+      1
+    ],
+    "b21a881a": [
+      0,
+      1
+    ],
+    "58d9b603": [
+      0,
+      1
+    ]
+  }
+}

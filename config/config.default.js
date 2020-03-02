@@ -4,6 +4,8 @@
 
 const path = require('path');
 const webpackOption = require('./built-server-bundle.js');
+const clientWebpackOption = require('./built-client-bundle.js');
+
 /**
  * @param {Egg.EggAppInfo} appInfo app info
  */
@@ -41,6 +43,7 @@ module.exports = appInfo => {
   };
 
   config.webpack = webpackOption;
+  config.clientWebpack = clientWebpackOption;
 
   // add your user config here
   const userConfig = {
