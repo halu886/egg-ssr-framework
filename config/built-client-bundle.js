@@ -3,9 +3,14 @@
 const merge = require('webpack-merge');
 const baseConfig = require('./webpack.base.config.js');
 const VueSSRClientPlugin = require('vue-server-renderer/client-plugin');
+const path = require('path');
 
 module.exports = merge(baseConfig, {
-  entry: './app/web/client-index.js',
+  entry: path.resolve(__dirname, '../app/web/client-index.js'),
+  output: {
+    publicPath: '/app/public',
+    // filename: '[name].[chunkhash].js',
+  },
   optimization: {
     runtimeChunk: {
       name: 'manifest',
