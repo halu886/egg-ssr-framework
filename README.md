@@ -7,11 +7,11 @@ demo of pc`s 4.0 that research the new framework base of egg and build by webpac
 <!-- TOC -->
 
 - [pc-4.0-demo](#pc-40-demo)
-    - [Checkout List](#checkout-list)
-    - [QuickStart](#quickstart)
-        - [Development](#development)
-        - [Deploy](#deploy)
-        - [npm scripts](#npm-scripts)
+  - [Checkout List](#checkout-list)
+  - [QuickStart](#quickstart)
+    - [Development](#development)
+    - [Deploy](#deploy)
+    - [npm scripts](#npm-scripts)
 
 <!-- /TOC -->
 
@@ -23,7 +23,7 @@ demo of pc`s 4.0 that research the new framework base of egg and build by webpac
 - Template cache ☑️
 - Inject data to template ☑️
 - intergration lru module ☑️
-- Client side hydration 🔨
+- Client side hydration ☑️
 - Authority interceptor 🔨
 
 ## QuickStart
@@ -52,6 +52,5 @@ $ npm stop
 - Use `npm run lint` to check code style.
 - Use `npm test` to run unit test.
 - Use `npm run autod` to auto detect dependencies upgrade, see [autod](https://www.npmjs.com/package/autod) for more detail.
-
 
 [egg]: https://eggjs.org
