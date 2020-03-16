@@ -1,25 +1,35 @@
-import Vuex from "vuex";
-import api from "@api";
+"use strict";
 
-const store = new Vuex.store({
+import Vuex from "vuex";
+
+const vuex = Vuex.Store({
   state: {
-    renders: []
+    recommend: [],
+    main: null,
+    top: [],
+    bottom: null
   },
   mutations: {
-    setRenders(state, renders) {
-      state.renders = renders;
+    updateRecommend(state, recommend) {
+      state.recommend = recommend;
+    },
+    updateMain(state, main) {
+      state.main = main;
+    },
+    udpateTop(state, top) {
+      state.top = top;
+    },
+    updateBottom(state, bottom) {
+      state.bottom = bottom;
     }
   },
   actions: {
-    async setRenders({ commit }, renders) {
-      commit("setRenders", renders);
+    async updateTop({ commit }, { name }) {
+      // return commit("udpateTop",top);
+      const top = "top" + (await api.getTop());
+      return top;
     }
-    // async getRenders({state}) {
-    //     if(state.renders){
-
-    //     }
-    // }
   }
 });
 
-export default store;
+export default vuex;
