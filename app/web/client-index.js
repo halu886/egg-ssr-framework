@@ -1,6 +1,6 @@
 "use strict";
 
-import ClientVue from "./ClientApp.vue";
+import ClientVue from "./App.vue";
 import Vue from "vue";
 const clientApp = new Vue({
   render: h => h(ClientVue)
