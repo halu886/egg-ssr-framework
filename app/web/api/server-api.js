@@ -1,9 +1,8 @@
-import axios from "axios";
-
-class ServerApi {
-  constructor() {}
-  async getRender() {
-    return await axios.get("/render");
-  }
+export default function(ctx){
+   return {
+      fetchTop:ctx.service.top.getTop,
+      fetchBottom:ctx.service.bottom.getBottom,
+      fetchRecommder:ctx.service.recommder.fetchRecommder,
+      fetchMain:ctx.service.recommder.getMain
+   }
 }
-export default new ServerApi();

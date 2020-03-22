@@ -319,10 +319,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    components: {
-        mainHeader: _components_mainHeader_index_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-        mainFooter: _components_mainFooter_index_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
-    }
+  components: {
+    mainHeader: _components_mainHeader_index_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    mainFooter: _components_mainFooter_index_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }
 });
 
 /***/ }),

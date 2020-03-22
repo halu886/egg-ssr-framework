@@ -1,11 +1,26 @@
-import { VueRouter } from "vue-router"
+import VueRouter from "vue-router";
+import main from "../App.vue";
+import Vue from "vue";
+
+Vue.use(VueRouter);
+
 const routes = [
-    {path:'/top',component:import('/top')},
-    {path:'/recommenders',component:import('/recommenders')},
-    {path:'/bottom',component:import('/bottom')},
-    {path:'/main',component:import('/main')}
+  {
+    path: "/",
+    component: main,
+    children: [
+      {
+        path: "/top",
+        component: () => import("../components/mainHeader/index.vue")
+      },
+      {
+        path: "/bottom",
+        component: () => import("../components/mainFooter/index.vue")
+      }
+    ]
+  }
 ];
 
-const routes = new VueRouter(routes);
+const routers = new VueRouter(routes);
 
-export default routes;
+export default routers;

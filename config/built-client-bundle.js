@@ -7,6 +7,11 @@ const path = require('path');
 
 module.exports = merge(baseConfig, {
   entry: path.resolve(__dirname, '../app/web/client-index.js'),
+  resolve: {
+    alias: {
+      api: '@/api/client-api.js',
+    },
+  },
   output: {
     publicPath: '/app/public',
     // filename: '[name].[chunkhash].js',

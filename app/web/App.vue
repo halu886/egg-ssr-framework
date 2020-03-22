@@ -1,33 +1,33 @@
 <template>
   <div id="app">
-      <main-header></main-header>
-      <div class="root">
-          <div class="overview">
-              <div class="main-show">SHOW</div>
-              <div class="vices">
-                  <div>recommend</div>
-                  <div>recommend</div>
-                  <div>recommend</div>
-                  <div>recommend</div>
-              </div>
-          </div>
+    <main-header></main-header>
+    <div class="root">
+      <div class="overview">
+        <div class="main-show">SHOW</div>
+        <div class="vices">
+          <div>recommend</div>
+          <div>recommend</div>
+          <div>recommend</div>
+          <div>recommend</div>
+        </div>
       </div>
-      <main-footer></main-footer>
+    </div>
+    <main-footer></main-footer>
   </div>
 </template>
 
 <style lang="less">
-#app{
+#app {
   min-height: 100vh;
 }
-.root{
-  padding: 20px 200px;   
-  .overview{
+.root {
+  padding: 20px 200px;
+  .overview {
     border: 1px solid grey;
     position: relative;
     text-align: center;
     padding-left: 400px;
-    .main-show{
+    .main-show {
       position: absolute;
       left: 0;
       top: 0;
@@ -36,10 +36,10 @@
       background: green;
       display: inline-block;
     }
-    .vices{
+    .vices {
       display: inline-block;
       width: 200px;
-      &>div{
+      & > div {
         width: 200px;
         line-height: 100px;
         background: red;
@@ -53,9 +53,9 @@
 import mainHeader from "./components/mainHeader/index.vue";
 import mainFooter from "./components/mainFooter/index.vue";
 export default {
-   components:{
-       mainHeader,
-       mainFooter
-   } 
-}
+  components: {
+    mainHeader,
+    mainFooter
+  }
+};
 </script>

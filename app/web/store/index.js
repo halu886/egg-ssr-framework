@@ -1,8 +1,11 @@
 "use strict";
 
 import Vuex from "vuex";
+import Vue from "vue";
 
-const vuex = Vuex.Store({
+Vue.use(Vuex);
+
+const vuex = new Vuex.Store({
   state: {
     recommend: [],
     main: null,

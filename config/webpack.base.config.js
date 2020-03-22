@@ -10,12 +10,10 @@ const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
   mode: 'development',
-  devtool: isProd
-    ? false
-    : '#cheap-module-source-map',
+  devtool: isProd ? false : '#cheap-module-source-map',
   output: {
     publicPath: '/dist/',
-    // filename: '[name].[chunkhash].js',
+    chunkFilename: '[name].bundle.js',
   },
   resolve: {
     alias: {
@@ -82,8 +80,5 @@ module.exports = {
         filename: 'common.[chunkhash].css',
       }),
     ]
-    : [
-      new VueLoaderPlugin(),
-      new FriendlyErrorsPlugin(),
-    ],
+    : [ new VueLoaderPlugin(), new FriendlyErrorsPlugin() ],
 };
