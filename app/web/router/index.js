@@ -4,23 +4,25 @@ import Vue from "vue";
 
 Vue.use(VueRouter);
 
-const routes = [
-  {
-    path: "/",
-    component: main,
-    children: [
+export default () => {
+  return new VueRouter({
+    routes: [
       {
-        path: "/top",
-        component: () => import("../components/mainHeader/index.vue")
-      },
-      {
-        path: "/bottom",
-        component: () => import("../components/mainFooter/index.vue")
+        path: "/",
+        component: main,
+        children: [
+          {
+            path: "top",
+            component: () => import("../components/mainHeader/index.vue")
+          },
+          {
+            path: "bottom",
+            component: () => import("../components/mainFooter/index.vue")
+          }
+        ]
       }
     ]
-  }
-];
+  });
 
-const routers = new VueRouter(routes);
-
-export default routers;
+  // const routers = new VueRouter(routes);
+};

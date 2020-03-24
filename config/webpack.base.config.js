@@ -18,6 +18,7 @@ module.exports = {
   resolve: {
     alias: {
       public: path.resolve(__dirname, '../public'),
+      '@': path.resolve(__dirname, '../app/web'),
     },
   },
   module: {

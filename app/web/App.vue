@@ -1,18 +1,16 @@
 <template>
   <div id="app">
-    <main-header></main-header>
+    <!-- <main-header></main-header> -->
+    <router-view></router-view>
     <div class="root">
       <div class="overview">
         <div class="main-show">SHOW</div>
         <div class="vices">
-          <div>recommend</div>
-          <div>recommend</div>
-          <div>recommend</div>
-          <div>recommend</div>
+          <div v-for="(r,$index) in recommend" :key="$index">{{r}}</div>
         </div>
       </div>
     </div>
-    <main-footer></main-footer>
+    <!-- <main-footer></main-footer> -->
   </div>
 </template>
 
@@ -50,12 +48,12 @@
 </style>
 
 <script>
-import mainHeader from "./components/mainHeader/index.vue";
-import mainFooter from "./components/mainFooter/index.vue";
+import { mapState } from "vuex";
+
 export default {
-  components: {
-    mainHeader,
-    mainFooter
+  computed: { ...mapState(["recommend"]) },
+  asyncData(store, router, context) {
+    return store.dispatch("updateRecommend", context);
   }
 };
 </script>

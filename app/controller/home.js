@@ -5,7 +5,7 @@ const Controller = require('egg').Controller;
 class HomeController extends Controller {
   async index() {
     const { ctx } = this;
-    await ctx.render('index.js');
+    await ctx.render('index.js', { params: { url: '/top' } });
   }
 
   async renderString() {
