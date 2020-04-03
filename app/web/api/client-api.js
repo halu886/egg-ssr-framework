@@ -5,13 +5,13 @@ function getClientAPI() {
     getTop: async () => {
       return await axios.get("/get/top").data;
     },
-    getBottom: () => {
+    getBottom: async () => {
       return await axios.get("/get/bottom").data;
     },
-    getRecommender: () => {
+    getRecommender: async () => {
       return await axios.get("/get/recommender").data;
     },
-    getMain: () => {
+    getMain: async () => {
       return await axios.get("/get/main").data;
     }
   };
