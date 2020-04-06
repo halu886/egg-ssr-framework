@@ -2,7 +2,7 @@
 
 import Vuex from "vuex";
 import Vue from "vue";
-import api from "../api";
+import * as api from "../api";
 
 Vue.use(Vuex);
 
@@ -21,7 +21,7 @@ export default () => {
       updateMain(state, main) {
         state.main = main;
       },
-      udpateTop(state, top) {
+      updateTop(state, top) {
         state.top = top;
       },
       updateBottom(state, bottom) {
@@ -35,7 +35,7 @@ export default () => {
         commit("updateTop", tops);
       },
       async updateRecommend({ commit }, context) {
-        let recommends = await api.context(context);
+        let recommends = await api.fetchRecommder(context);
         recommends = recommends.map(r => "recommend" + r);
         commit("updateRecommend", recommends);
       }

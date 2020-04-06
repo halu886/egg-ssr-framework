@@ -34,9 +34,20 @@ module.exports = {
         },
       },
       {
+        test: /\.less$/,
+        use: [ 'vue-style-loader', 'css-loader', 'less-loader' ],
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+        ],
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -45,25 +56,6 @@ module.exports = {
           limit: 10000,
           name: '[name].[ext]?[hash]',
         },
-      },
-      {
-        test: /\.less$/,
-        use: [ 'vue-style-loader', 'css-loader', 'less-loader' ],
-      },
-      {
-        test: /\.styl(us)?$/,
-        use: isProd
-          ? ExtractTextPlugin.extract({
-            use: [
-              {
-                loader: 'css-loader',
-                options: { minimize: true },
-              },
-              'stylus-loader',
-            ],
-            fallback: 'vue-style-loader',
-          })
-          : [ 'vue-style-loader', 'css-loader', 'stylus-loader' ],
       },
     ],
   },

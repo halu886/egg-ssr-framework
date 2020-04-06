@@ -1,10 +1,6 @@
 <template>
   <div class="main-header">
-    <div v-for="(h,$key) in headers" :key="$key">{{h}}</div>
-    <!-- <div>{{ root.headers[0] }}</div>
-    <div>{{ .headers[1] }}</div>
-    <div>{{ $root.headers[2] }}</div>
-    <div>{{ $root.headers[3] }}</div>-->
+    <div v-for="(h,$key) in top" :key="$key">{{h}}</div>
   </div>
 </template>
 <style lang="less">
@@ -27,7 +23,7 @@
 <script>
 import { mapState } from "vuex";
 export default {
-  computed: { ...mapState(["recommend"]) },
+  computed: { ...mapState(["top"]) },
   asyncData(store, router, context) {
     return store.dispatch("updateTop", context);
   }

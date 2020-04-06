@@ -20,26 +20,27 @@ export default context => {
       store
     });
     router.push("/");
-    router.onReady(next => {
+    router.onReady(() => {
       const routeComponents = router.getMatchedComponents();
-      if (routeComponents.length) {
+      if (!routeComponents.length) {
         reject({ code: 404 });
       }
       Promise.all(
         routeComponents
           .map(
-            ({ asyncData }) => asyncData && asyncData(store, router, context)
+            ({ asyncData }) =>{
+              asyncData && asyncData(store, router, context)}
           )
           .filter(_ => _)
       )
         .then(() => {
           context.state = store.state;
           resolve(appInit);
-          next();
         })
         .catch(e => {
+          console.error(e)
           reject(e);
         });
     });
-  });
+  }).catch(console.error);
 };

@@ -1,7 +1,7 @@
 import api from "api";
 
 export async function fetchTop(context) {
-  return await api.fetchTop(context);
+  return await api(context).fetchTop();
 }
 
 export async function fetchBottom() {
@@ -9,7 +9,8 @@ export async function fetchBottom() {
 }
 
 export async function fetchRecommder(context) {
-  return await api.fetchRecommder(context);
+
+  return await api(context).fetchRecommder();
 }
 
 export async function fetchMain() {
