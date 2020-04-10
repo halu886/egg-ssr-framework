@@ -8,16 +8,16 @@ import createRouter from "./router/index";
 
 // 导出一个工厂函数，用于创建新的
 // 应用程序、router 和 store 实例
-export default context => {
+export default (context) => {
   return new Promise((resolve, reject) => {
     const store = createStore();
     const router = createRouter();
+    console.log(App.template);
     const appInit = new Vue({
       // 根实例简单的渲染应用程序组件。
-      data: context,
-      render: h => h(App),
+      render: (h) => h(App),
       router,
-      store
+      store,
     });
     router.push("/");
     router.onReady(() => {
@@ -27,18 +27,18 @@ export default context => {
       }
       Promise.all(
         routeComponents
-          .map(
-            ({ asyncData }) =>{
-              asyncData && asyncData(store, router, context)}
-          )
-          .filter(_ => _)
+          .map(({ asyncData }) => {
+            asyncData && asyncData(store, router, context);
+          })
+          .filter((_) => _)
       )
         .then(() => {
           context.state = store.state;
+          // console.log(appInit.template, appInit);
           resolve(appInit);
         })
-        .catch(e => {
-          console.error(e)
+        .catch((e) => {
+          console.error(e);
           reject(e);
         });
     });

@@ -12,7 +12,7 @@ export default () => {
       recommend: [],
       main: null,
       top: [],
-      bottom: null
+      bottom: null,
     },
     mutations: {
       updateRecommend(state, recommend) {
@@ -26,19 +26,19 @@ export default () => {
       },
       updateBottom(state, bottom) {
         state.bottom = bottom;
-      }
+      },
     },
     actions: {
       async updateTop({ commit }, context) {
         let tops = await api.fetchTop(context);
-        tops = tops.map(r => "top" + r);
+        tops = tops.map((r) => "top" + r);
         commit("updateTop", tops);
       },
       async updateRecommend({ commit }, context) {
         let recommends = await api.fetchRecommder(context);
-        recommends = recommends.map(r => "recommend" + r);
+        recommends = recommends.map((r) => "recommend" + r);
         commit("updateRecommend", recommends);
-      }
-    }
+      },
+    },
   });
 };

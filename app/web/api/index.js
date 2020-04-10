@@ -5,16 +5,15 @@ export async function fetchTop(context) {
 }
 
 export async function fetchBottom() {
-  return await api.fetchBottom();
+  return await api(context).fetchBottom();
 }
 
 export async function fetchRecommder(context) {
-
   return await api(context).fetchRecommder();
 }
 
 export async function fetchMain() {
-  return await api.fetchMain();
+  return await api(context).fetchMain();
 }
 
 // let apiEnum = null;
