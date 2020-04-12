@@ -10,6 +10,6 @@ module.exports = app => {
   router.get('/test', controller.test.index);
   router.get('/get/top', controller.get.top);
   router.get('/get/bottom', controller.get.bottom);
-  router.get('/get/recommder', controller.get.recommder);
+  router.get('/get/recommender', controller.get.recommder);
   router.get('/get/main', controller.get.main);
 };

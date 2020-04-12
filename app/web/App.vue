@@ -1,13 +1,18 @@
 <template>
-  <div id="test">
-    <!-- <main-header></main-header> -->
-    <!-- <router-view></router-view> -->
-    <div class="root">
-      <div class="overview">
-        <div class="main-show">SHOW</div>
-        <div class="vices">
-          <div v-for="(r,$index) in recommend" :key="$index">{{r}}</div>
-        </div>
+  <div class="root">
+    <router-view></router-view>
+    <div class="links">
+      <div>
+        <router-link to="top">Go to Top</router-link>
+      </div>
+      <div>
+        <router-link to="bottom">Go to Bottom</router-link>
+      </div>
+    </div>
+    <div class="overview">
+      <div class="main-show">SHOW</div>
+      <div class="vices">
+        <div v-for="(r,$index) in recommend" :key="$index">{{r}}</div>
       </div>
     </div>
     <!-- <main-footer></main-footer> -->
@@ -20,6 +25,14 @@
 }
 .root {
   padding: 20px 200px;
+  .links{
+    &>div{
+      display: inline-block;
+      font-size: 18px;
+      line-height: 40px;
+      padding: 0 20px;
+    }
+  }
   .overview {
     border: 1px solid grey;
     position: relative;

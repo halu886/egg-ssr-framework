@@ -6,7 +6,6 @@ class HeaderService extends Service {
     for (;index > 0; --index) {
       random.push(Math.random() * 100);
     }
-    console.log('test', random);
     return random;
   }
 }

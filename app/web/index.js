@@ -12,10 +12,9 @@ export default (context) => {
   return new Promise((resolve, reject) => {
     const store = createStore();
     const router = createRouter();
-    console.log(App.template);
     const appInit = new Vue({
       // 根实例简单的渲染应用程序组件。
-      render: (h) => h(App),
+      render: (h) => h({template:'<div id="app"><router-view></router-view></div>'}),
       router,
       store,
     });

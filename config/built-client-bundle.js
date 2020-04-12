@@ -13,7 +13,7 @@ module.exports = merge(baseConfig, {
     },
   },
   output: {
-    publicPath: '/app/public',
+    publicPath: '/app/public/',
     // filename: '[name].[chunkhash].js',
   },
   optimization: {
