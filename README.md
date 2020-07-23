@@ -1,17 +1,17 @@
-# pc-4.0-demo
+# egg-ssr-framework
 
 demo of pc`s 4.0 that research the new framework base of egg and build by webpack and render by vue 🐰
 
-> it depend on [Egg-webpack-tuji](http://gogs.tuji.com/hongchun/egg-webpack-tuji) && [Egg-view-vue-tuji](http://gogs.tuji.com/hongchun/egg-view-vue-tuji) that encapsulation by [halu886🧑🏻‍💻](http://gogs.tuji.com/hongchun)。
+> it depend on [Egg-webpack-halu886](https://github.com/halu886/egg-webpack-halu886) && [Egg-view-vue-halu886](https://github.com/halu886/egg-view-vue-halu886) that encapsulation by [halu886🧑🏻‍💻](http://github.com/halu886)。
 
 <!-- TOC -->
 
-- [pc-4.0-demo](#pc-40-demo)
-  - [Checkout List](#checkout-list)
-  - [QuickStart](#quickstart)
-    - [Development](#development)
-    - [Deploy](#deploy)
-    - [npm scripts](#npm-scripts)
+- [egg-ssr-framework](#egg-ssr-framework)
+    - [Checkout List](#checkout-list)
+    - [QuickStart](#quickstart)
+        - [Development](#development)
+        - [Deploy](#deploy)
+        - [npm scripts](#npm-scripts)
 
 <!-- /TOC -->
 
